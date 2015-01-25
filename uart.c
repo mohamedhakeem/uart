@@ -6,7 +6,7 @@
  */ 
 
 #include "uart.h"
-void UART_init( unsigned int ubrr)
+void UART_init( )
 {
 	/* Set baud rate */
 	UBRRH = 0 ;
@@ -40,14 +40,14 @@ uint8 UART_receiveByte(  )
 /*****************************************************************************************************/
 void UART_sendString(const char *Str)
 {
-	unsigned char i = 0;
+	uint8 i = 0;
 	while(Str[i] != '\0')
 	{
 		UART_sendByte(Str[i]);
 		i++;
 	}
 }
-
+/******************************************************************************************************/
 void UART_receiveString(char *Str)
 {
 	uint8 i = 0;

@@ -10,7 +10,7 @@
 int main(void)
 {
 	char Str[20];
-	char data;
+	
 	UART_init();
 	while(1)
 	{

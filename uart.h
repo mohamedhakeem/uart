@@ -11,7 +11,11 @@
 #include "micro_config.h"
 
 
-
+void UART_init( );
+void UART_sendByte( uint8 data );
+uint8 UART_receiveByte(  );
+void UART_sendString(const char *Str);
+void UART_receiveString(char *Str);
 
 
 
